@@ -84,6 +84,11 @@ function tienePropiedad(objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
+  if(objeto[propiedad] ){
+    return true
+  }else{
+    return false
+  }
 }
 
 function verificarPassword(usuario, password) {
@@ -91,12 +96,20 @@ function verificarPassword(usuario, password) {
   // Devuelve "true" si coinciden
   // De lo contrario, devuelve "false"
   // // Tu código:
+  if(password === usuario['password']){
+    return true
+  }else{
+    false
+  }
 }
 
 function actualizarPassword(usuario, nuevaPassword) {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
   // Devuelve el objeto
   // Tu código:
+  usuario.password = nuevaPassword
+  return usuario
+  
 }
 
 function agregarAmigo(usuario, nuevoAmigo) {
@@ -104,7 +117,9 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // // Tu código:
-}
+  usuario.amigos.push(nuevoAmigo)
+  return usuario
+} 
 
 function pasarUsuarioAPremium(usuarios) {
   // "usuarios" es un array de objetos "usuario"
@@ -112,7 +127,12 @@ function pasarUsuarioAPremium(usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
+  usuarios.forEach(element => {
+    element.esPremium = true;
+  });
+  return usuarios
 }
+
 
 function sumarLikesDeUsuario(usuario) {
   // "usuario" tiene una propiedad llamada "posts" que es un array
@@ -121,6 +141,12 @@ function sumarLikesDeUsuario(usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
+  arr = usuario.posts
+  acc = 0
+  arr.forEach(element => {
+      acc += element.likes
+  })
+  return acc
 }
 
 function agregarMetodoCalculoDescuento(producto) {
@@ -133,7 +159,13 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-
+  
+  function calcularPrecioDescuento () {
+    descuento = producto.precio - producto.precio * (producto.porcentajeDeDescuento - 1)
+    return descuento
+    }
+    producto[calcularPrecioDescuento]
+  return producto
 }
 
 // No modificar nada debajo de esta línea
