@@ -64,12 +64,33 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
+  switch (color) {
+    case 'blue':
+      return 'This is blue';
+      break; 
+    case 'red':
+      return 'This is red'
+      break;
+    case 'green':
+        return 'This is green';
+        break; 
+    case 'orange':
+      return 'This is orange';
+      break;
+    default:
+      return 'Color not found'
+  }
 }
 
 function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
+  if(numero = 10 || 5) {
+    return true
+  }else {
+    return false
+  }
 }
 
 function estaEnRango(numero) {
@@ -86,6 +107,12 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
+  let entero = numero - Math.floor(numero)
+  if(entero = 0){
+    return true
+  }else {
+    return false
+  }
 }
 
 function fizzBuzz(numero) {
@@ -139,13 +166,13 @@ function tieneTresDigitos(numero){
   }else {
     return false
   }
-  
 }
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+
 }
 
 
