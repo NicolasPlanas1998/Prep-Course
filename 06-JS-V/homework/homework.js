@@ -28,6 +28,7 @@ function agregarMetodoPrototype(Constructor) {
   Constructor.prototype.saludar = () =>{return 'Hello World!'}
 }
 
+
 function agregarStringInvertida() {
   // Agrega un método al prototype de String que devuelva la misma cadena de caracteres, pero invertida.
   // El método debe llamarse "reverse"
@@ -39,7 +40,6 @@ function agregarStringInvertida() {
     for(i = this.length; i >= 0; i--){
       newLetter = this.length[i]
       reverseWord =+ newLetter
-
     }
   }
 }

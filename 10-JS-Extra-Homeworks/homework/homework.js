@@ -10,16 +10,95 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
-}
+  // let arr = []
+  // for( key in objeto){
+  //   let i;
+  //   i++
+  //   arr.push( [key.toString(), objeto[key]])
+  // }
 
+  // return arr
+
+  let matriz= Object.entries(objeto)
+  return matriz
+
+}
+let obj = {
+  D: 1,
+  B: 2,
+  C: 3
+}
+console.log(deObjetoAmatriz(obj));
 
 function numberOfCharacters(string) {
   //La función recibe un string. Recorre el srting y devuelve el caracter con el número de veces que aparece 
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+
+  // str = 'aabbb'
+  // arr = str.split('') // [a,a,b,b,b]
+
+  // newArr = []
+  // obj = {}
+
+  // for( element of arr){
+  //   bolean = newArr.some(someElement => someElement === element)
+  //   if(bolean == false){
+  //     obj = {element}
+  //   } else {
+      
+      
+  //   }
+  // }
+  
+  // forEach(element => {
+  //   newArr.push(element) // [a]
+    
+  // })
+
+  // arrOld.filter( element => {
+  //   hola = arrOld.some(someElement => someElement === element) 
+  //   console.log(hola)
+  //   })
+
+  let stringToArr = string.split("")
+
+  console.log(stringToArr);
+
+  // let a = stringToArr.filter(e=>stringToArr.includes(e))
+  // stringToArr.reduce((ac,el)=>{
+  //   if(ac === el)
+  // })
+  // console.log(a);
+  let obj = {}
+  for (let i = 0; i < stringToArr.length; i++) {
+    // console.log(stringToArr.shift);
+    let index = i+1
+    let cantidad = 2
+    for (let j =index ; j < stringToArr.length; j++) {
+      console.log(stringToArr[i], stringToArr[j]);
+      if(stringToArr[i] === stringToArr[j]) obj = {...obj,[stringToArr[i]]:cantidad++}
+    }
+
+    console.log(obj);
+    // let repeat = true
+    // while(repeat){
+    //   if(string.)
+    }
+
+  // do{
+    
+  // }
+    
+    
+  // }
+
+      return obj
+
 }
 
+console.log(numberOfCharacters("aaavcc"));
 
 function capToFront(s) {
   //Realiza una función que reciba como parámetro un string y mueva todas las letras mayúsculas
