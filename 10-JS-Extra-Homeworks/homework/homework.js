@@ -36,77 +36,47 @@ function numberOfCharacters(string) {
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
 
-  // str = 'aabbb'
-  // arr = str.split('') // [a,a,b,b,b]
-
-  // newArr = []
-  // obj = {}
-
-  // for( element of arr){
-  //   bolean = newArr.some(someElement => someElement === element)
-  //   if(bolean == false){
-  //     obj = {element}
-  //   } else {
-      
-      
-  //   }
-  // }
-  
-  // forEach(element => {
-  //   newArr.push(element) // [a]
-    
-  // })
-
-  // arrOld.filter( element => {
-  //   hola = arrOld.some(someElement => someElement === element) 
-  //   console.log(hola)
-  //   })
-
   let stringToArr = string.split("")
 
   console.log(stringToArr);
 
-  // let a = stringToArr.filter(e=>stringToArr.includes(e))
-  // stringToArr.reduce((ac,el)=>{
-  //   if(ac === el)
-  // })
-  // console.log(a);
+
   let obj = {}
   for (let i = 0; i < stringToArr.length; i++) {
     // console.log(stringToArr.shift);
     let index = i+1
-    let cantidad = 2
+    let cantidad = 1
     for (let j =index ; j < stringToArr.length; j++) {
       console.log(stringToArr[i], stringToArr[j]);
-      if(stringToArr[i] === stringToArr[j]) obj = {...obj,[stringToArr[i]]:cantidad++}
+      if(stringToArr[i] === stringToArr[j]) {
+        cantidadLetra = cantidad++
+        console.log(cantidadLetra);
+        obj = {...obj,[stringToArr[i]]:cantidadLetra}
+      }
     }
 
-    console.log(obj);
-    // let repeat = true
-    // while(repeat){
-    //   if(string.)
-    }
-
-  // do{
-    
-  // }
-    
-    
-  // }
-
-      return obj
+  }
+  return obj
 
 }
 
-console.log(numberOfCharacters("aaavcc"));
+console.log(numberOfCharacters("aaavc"));
 
 function capToFront(s) {
   //Realiza una función que reciba como parámetro un string y mueva todas las letras mayúsculas
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  let upper = ''
+  lower =''
+  for (let i = 0; i < s.length; i++) {
+    if(s[i] === s[i].toUpperCase()) upper += s[i]
+    else lower += s[i] 
+  }
+  return upper+lower
 }
 
+console.log(capToFront("soyHENRY"));
 
 function asAmirror(str) {
   //La función recibe una frase. 

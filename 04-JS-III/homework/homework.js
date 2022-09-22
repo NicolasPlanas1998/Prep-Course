@@ -3,12 +3,14 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
+  return array.shift()
 }
-
+console.log(devolverPrimerElemento([1,2,3]));
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
+  return array.pop()
 }
 
 
@@ -23,21 +25,28 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+  let a = array.map(e =>  e+1 );
+  return a
 }
+console.log(incrementarPorUno([1,2,3]));
 
 
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+  array.push(elemento)
+  return array
 }
-
+console.log(agregarItemAlFinalDelArray([1,2,3],2));
 
 function agregarItemAlComienzoDelArray(array, elemento) {
   // Añade el "elemento" al comienzo del array
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+  array.unshift(elemento)
+  return array
 }
 
 
